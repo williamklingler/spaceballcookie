@@ -3,7 +3,6 @@ import Loop from '../graphics/Loop.js';
 
 export default class Loops extends React.Component{
   componentDidMount() {
-    draw();
     initialize();
     this.setState({interval: setInterval(function () {
       initialize();
@@ -23,7 +22,33 @@ export default class Loops extends React.Component{
   }
 }
 
-function draw() {
+
+function initialize(){
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+    ctx.canvas.width  = window.innerWidth;
+    ctx.canvas.height = window.innerHeight;
+
+    drawLoops(canvas);
+  }
+}
+
+function drawLoops(canvas){
+  var ctx = canvas.getContext('2d');
+
+  let myLoop = new Loop(0,0,100,100,ctx);
+  for(var j = -2000; j < canvas.width - myLoop.width; j+=myLoop.width * 2){
+    for(var i = 0; j+ i < canvas.width - myLoop.width; i+= myLoop.width * 1.2){
+      if (i+j < canvas.width && i+j > 0 && i/2 > 0 && i/2 < canvas.height){
+        myLoop.translate(i + j + (Math.random() * (14 - -14) -14),i/2 -30 + (Math.random() * (14 - -14) -14));
+        myLoop.draw();
+      }
+    }
+  }
+}
+
+/*function draw() {
   var canvas = document.getElementById('canvas');
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
@@ -42,7 +67,7 @@ function draw() {
     /*ctx.save();
     ctx.fillStyle = 'rgb(255,255,255)';
     drawGridSquare(100,100,ctx);
-    ctx.restore();*/
+    ctx.restore();
   }
 }
 
@@ -61,29 +86,4 @@ function drawGrid(ctx){
       drawGridSquare(i, j, ctx);
     }
   }
-}
-
-function initialize(){
-  var canvas = document.getElementById('canvas');
-  if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
-    ctx.canvas.width  = window.innerWidth;
-    ctx.canvas.height = window.innerHeight;
-
-    drawLoops(canvas);
-  }
-}
-
-function drawLoops(canvas){
-  var ctx = canvas.getContext('2d');
-
-  let myLoop = new Loop(0,0,7,7,ctx);
-  for(var j = -1300; j < canvas.width - myLoop.width - 700; j+=myLoop.width * 2){
-    for(var i = 0; j+ i < canvas.width - myLoop.width; i+= myLoop.width * 1.2){
-      if (i+j < canvas.width && i+j > 0 && i/2 > 0 && i/2 < canvas.height){
-        myLoop.translate(i + j + (Math.random() * (14 - -14) -14),i/2 -30 + (Math.random() * (14 - -14) -14));
-        myLoop.draw();
-      }
-    }
-  }
-}
+}*/
