@@ -1,5 +1,7 @@
 import React from 'react'
 
+var STAR_COUNT
+
 export default class Header extends React.Component{
   componentDidMount(){
     canvas = document.getElementById( 'canvasHeader' );
@@ -11,6 +13,8 @@ export default class Header extends React.Component{
     canvas.onmousemove = onMouseMove;
     canvas.ontouchmove = onTouchMove;
     canvas.ontouchend = onMouseLeave;
+
+    STAR_COUNT = ( window.innerWidth + window.innerHeight ) / 8;
   }
   render(){
     return (
@@ -23,8 +27,7 @@ export default class Header extends React.Component{
 }
 
 //code for making the stars work, got from https://codepen.io/hakimel/pen/bzrZGo
-const STAR_COUNT = ( window.innerWidth + window.innerHeight ) / 8,
-STAR_SIZE = 3,
+const STAR_SIZE = 3,
 STAR_MIN_SCALE = 0.2,
 OVERFLOW_THRESHOLD = 50;
 
