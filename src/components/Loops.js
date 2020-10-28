@@ -70,9 +70,17 @@ function initialize(){
     ctx.canvas.width  = window.innerWidth;
     ctx.canvas.height = window.innerHeight;
 
-    let myLoop = new Loop(0,0,5,5,ctx);
-    for(var j = -1000; j < canvas.width - myLoop.width - 700; j+=myLoop.width * 2){
-      for(var i = 0; j+ i < canvas.width - myLoop.width; i+= myLoop.width * 1.2){
+    drawLoops(canvas);
+  }
+}
+
+function drawLoops(canvas){
+  var ctx = canvas.getContext('2d');
+
+  let myLoop = new Loop(0,0,7,7,ctx);
+  for(var j = -1300; j < canvas.width - myLoop.width - 700; j+=myLoop.width * 2){
+    for(var i = 0; j+ i < canvas.width - myLoop.width; i+= myLoop.width * 1.2){
+      if (i+j < canvas.width && i+j > 0 && i/2 > 0 && i/2 < canvas.height){
         myLoop.translate(i + j + (Math.random() * (14 - -14) -14),i/2 -30 + (Math.random() * (14 - -14) -14));
         myLoop.draw();
       }
