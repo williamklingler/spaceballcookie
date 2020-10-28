@@ -1,20 +1,24 @@
 import React from 'react'
 
-var STAR_COUNT
+var STAR_COUNT;
 
 export default class Header extends React.Component{
   componentDidMount(){
     canvas = document.getElementById( 'canvasHeader' );
     context = canvas.getContext( '2d' );
-    generate();
-    resize();
-    step();
+
+    STAR_COUNT = ( window.innerWidth + window.innerHeight ) / 8;
 
     canvas.onmousemove = onMouseMove;
     canvas.ontouchmove = onTouchMove;
     canvas.ontouchend = onMouseLeave;
 
-    STAR_COUNT = ( window.innerWidth + window.innerHeight ) / 8;
+    window.onresize = resize;
+    document.onmouseleave = onMouseLeave;
+
+    generate();
+    resize();
+    step();
   }
   render(){
     return (
@@ -46,15 +50,6 @@ pointerY;
 let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.0005 };
 
 let touchInput = false;
-
-window.onresize = resize;
-document.onmouseleave = onMouseLeave;
-
-
-/*window.addEventListener('load', (event) => {
-
-});*/
-
 
 function generate() {
 
