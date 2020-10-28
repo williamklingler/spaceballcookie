@@ -4,6 +4,7 @@ background-color: black;
 
 body{
   /*background: linear-gradient(#000, #000) no-repeat center/2px 100%;*/
+  overflow-x: hidden;
 }
 
 .white {
@@ -26,6 +27,7 @@ body{
 }
 
 #canvasContainer {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,6 +46,11 @@ body{
   position:absolute;
   width: 100%;
   height: 100%;
+}
+
+#will{
+  position: absolute;
+  z-index: 1;
 }
 
 /*#canvas {

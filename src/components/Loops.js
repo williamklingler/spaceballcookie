@@ -5,12 +5,19 @@ export default class Loops extends React.Component{
   componentDidMount() {
     draw();
     initialize();
+    this.setState({interval: setInterval(function () {
+      initialize();
+    }, 200)});
     window.onresize = initialize;
+  }
+  componentWillUnmount(){
+    clearInterval(this.state.interval);
   }
   render(){
     return(
       <div id="canvasContainer">
         <canvas id="canvas" height="800px" width="100%"></canvas>
+        <div id="will" className="spc"> hello there </div>
       </div>
     )
   }
@@ -63,10 +70,12 @@ function initialize(){
     ctx.canvas.width  = window.innerWidth;
     ctx.canvas.height = window.innerHeight;
 
-    let myLoop = new Loop(0,0,ctx);
-    for(var i = 0; i < canvas.width - 100; i+= 120){
-      myLoop.translate(i + (Math.random() * (14 - -14) -14),i/2 + (Math.random() * (14 - -14) -14));
-      myLoop.draw();
+    let myLoop = new Loop(0,0,5,5,ctx);
+    for(var j = -1000; j < canvas.width - myLoop.width - 700; j+=myLoop.width * 2){
+      for(var i = 0; j+ i < canvas.width - myLoop.width; i+= myLoop.width * 1.2){
+        myLoop.translate(i + j + (Math.random() * (14 - -14) -14),i/2 -30 + (Math.random() * (14 - -14) -14));
+        myLoop.draw();
+      }
     }
   }
 }
