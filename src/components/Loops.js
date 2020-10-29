@@ -29,14 +29,16 @@ export default class Loops extends React.Component {
               </h2>
             </div>
           </a>
-          <div className="card" id="kosta">
-            <p>
-              Kosta Gianicos
-            </p>
-            <h2>
-              McMaster Engineering Physics
-            </h2>
-          </div>
+          <a style={{textDecoration: "none"}} href="/kosta">
+            <div className="card" id="kosta">
+              <p>
+                Kosta Gianicos
+              </p>
+              <h2>
+                McMaster Engineering Physics
+              </h2>
+            </div>
+          </a>
         </div>
       </div>
     )}
