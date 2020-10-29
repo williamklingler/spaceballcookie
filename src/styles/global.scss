@@ -197,3 +197,76 @@ body{
   top: 40%;
   font-size: 7em;
 }
+
+.centerTextOverDiv{
+  position: absolute;
+  width:100%;
+  z-index: 1;
+  text-align: center;
+  top: 25%;
+}
+
+@mixin zebra-shadow($size, $colors) {
+  $text-shadow: ();
+  @for $i from 1 through length($colors) {
+    @for $j from 0 through $size {
+      $pos: (($i - 1) * $size + $j) * 1px;
+      $text-shadow: append(
+        $text-shadow,
+        $pos $pos nth($colors, $i),
+        'comma'
+      );
+    }
+  }
+  text-shadow: $text-shadow;
+}
+
+ .coolText {
+  font: bold 15vmin/1 'Cinzel', serif;
+  color: #fff;
+  animation:
+    text-shadow .75s linear infinite;
+}
+
+@keyframes text-shadow {
+  $red: #F40000;
+  $green: #28D58F;
+  $blue:  #15007F;
+  $yellow: #FFBA00;
+  $pink: #FD138A;
+
+  from, 19.9% {
+    @include zebra-shadow(5, (
+      $blue, $pink, $yellow, $red, $green,
+      $blue, $pink, $yellow, $red, $green
+    ));
+  }
+
+  20%, 39.9% {
+    @include zebra-shadow(5,  (
+      $green, $blue, $pink, $yellow, $red,
+      $green, $blue, $pink, $yellow, $red
+    ));
+  }
+
+  40%, 59.9% {
+    @include zebra-shadow(5, (
+      $red, $green, $blue, $pink, $yellow,
+      $red, $green, $blue, $pink, $yellow
+    ));
+  }
+
+  60%, 79.9% {
+    @include zebra-shadow(5, (
+      $yellow, $red, $green, $blue, $pink,
+      $yellow, $red, $green, $blue, $pink,
+    ));
+  }
+
+  80%, to {
+    @include zebra-shadow(5, (
+      $pink, $yellow, $red, $green, $blue,
+      $pink, $yellow, $red, $green, $blue
+    ));
+  }
+}

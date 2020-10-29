@@ -9,7 +9,7 @@ export default class Will extends React.Component{
       <div>
         <title>William Klingler 💚</title>
         <Particles height="100vh" options={options} />
-        <div id="willHeader"> WILLIAM KLINGLER </div>
+        <h1 className="coolText centerTextOverDiv"> William Klingler</h1>
       </div>
     )}
   }

@@ -18,5 +18,6 @@
          icon: `src/images/spc.png`
        },
      },
+     `gatsby-plugin-sass`,
    ],
  }
