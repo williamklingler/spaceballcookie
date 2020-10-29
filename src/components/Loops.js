@@ -29,7 +29,6 @@ export default class Loops extends React.Component {
               </h2>
             </div>
           </a>
-          <a style={{textDecoration: "none"}} href="/kosta">
           <div className="card" id="kosta">
             <p>
               Kosta Gianicos
@@ -38,7 +37,6 @@ export default class Loops extends React.Component {
               McMaster Engineering Physics
             </h2>
           </div>
-          </a>
         </div>
       </div>
     )}
