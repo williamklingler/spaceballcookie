@@ -12,6 +12,13 @@ body{
   overflow-x: hidden;
 }
 
+*{
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
 .white {
   color: white;
   font-family: "Work Sans";
