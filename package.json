@@ -15,9 +15,15 @@
   },
   "dependencies": {
     "gatsby": "^2.24.67",
+    "gatsby-plugin-manifest": "^2.4.37",
+    "gatsby-plugin-sass": "^2.3.22",
+    "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-tsparticles": "^1.18.7",
+    "typeface-archivo": "^1.1.13",
     "typeface-poppins": "^1.1.13",
+    "typeface-source-code-pro": "^1.1.13",
     "typeface-work-sans": "^1.1.13"
   },
   "devDependencies": {

@@ -23,6 +23,7 @@ export default class Header extends React.Component{
   render(){
     return (
       <div id="headerBackground">
+        <title>Spaceballcookie.</title>
         <canvas id="canvasHeader"></canvas>
         <h1 className="spc"> Spaceballcookie. </h1>
       </div>
