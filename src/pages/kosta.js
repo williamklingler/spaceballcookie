@@ -9,7 +9,9 @@ export default class Kosta extends React.Component{
       <div>
         <title>Kosta Gianicos 💚</title>
         <Particles height="100vh" options={options} />
-        <div id="willHeader"> KOSTA GIANICOS </div>
+        <div id="kostaHeader">
+        KOSTA GIANICOS
+        </div>
       </div>
     )}
   }

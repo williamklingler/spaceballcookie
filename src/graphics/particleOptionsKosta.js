@@ -26,7 +26,7 @@
         size: 40,
       },
       push: {
-        quantity: 4,
+        quantity: 10,
       },
       repulse: {
         distance: 125,
@@ -53,7 +53,7 @@
       enable: true,
       outMode: "bounce",
       random: false,
-      speed: 6,
+      speed: 12,
       straight: false,
     },
     number: {

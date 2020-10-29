@@ -197,3 +197,14 @@ body{
   top: 40%;
   font-size: 7em;
 }
+
+#kostaHeader{
+  font-family: MIB;
+  color: #FFF;
+  position: absolute;
+  width:100%;
+  z-index: 1;
+  text-align: center;
+  top: 40%;
+  font-size: 7em;
+}
