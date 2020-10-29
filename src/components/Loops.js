@@ -19,14 +19,16 @@ export default class Loops extends React.Component {
       <div id="canvasContainer">
         <canvas id="canvas" height="800px" width="100%"></canvas>
         <div className="cards">
-          <div className="card" id="will">
-            <p>
-              William Klingler
-            </p>
-            <h2>
-              UWaterloo Computer Science
-            </h2>
-          </div>
+          <a style={{textDecoration: "none"}} href="/will">
+            <div className="card" id="will">
+              <p>
+                William Klingler
+              </p>
+              <h2>
+                UWaterloo Computer Science
+              </h2>
+            </div>
+          </a>
           <div className="card" id="kosta">
             <p>
               Kosta Gianicos
@@ -57,7 +59,7 @@ export default class Loops extends React.Component {
     var count = 0;
     let myLoop = new Loop(0, 0, 100, 100, ctx);
     for (var j = -2000; j < canvas.width - myLoop.width; j += myLoop.width * 2) {
-      for (var i = 0; j + i < canvas.width - myLoop.width; i += myLoop.width * 1.2) {
+      for (var i = 0; j + i < canvas.width - myLoop.width + 100; i += myLoop.width * 1.2) {
         if (i + j < canvas.width + 100 && i + j > -100 && i / 2 > -100 && i / 2 < canvas.height) {
           count++
           myLoop.translate(i + j + (Math.random() * (14 - -14) - 14), i / 2 - 30 + (Math.random() * (14 - -14) - 14));
