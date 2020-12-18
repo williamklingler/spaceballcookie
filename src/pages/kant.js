@@ -16,7 +16,7 @@ const Podcast = () => {
     <div>
     One of Kant's major contributions to philosophy was his analysis of the attainment of knowledge. This included exploring the role that perception has in understanding the world around us, and exploring how reasoning can lead to truth. The following is a podcast between philosophers that discusses some of these topics. Start listening at 16:54, and listen for at least 10 minutes.
     <audio controls>
-      <source src="podcast.mp3#t=00:16:54" type="audio/mp3"/>
+      <source src="/podcast.mp3#t=00:16:54" type="audio/mp3"/>
       Your browser does not support the audio tag.
   </audio>
   </div>
