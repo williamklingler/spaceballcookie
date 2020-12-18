@@ -1,5 +1,5 @@
 import React from 'react';
-import Walk from "../components/Walk";
+import Walk from "../components/walk";
 
 export default class Loops extends React.Component {
   constructor(props){
