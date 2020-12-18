@@ -1,6 +1,7 @@
 /*html {
 background-color: black;
 }*/
+
 @font-face {
   font-family: "MIB";
   src: url("/fonts/MIB.ttf") format('truetype');
@@ -17,6 +18,43 @@ body{
 }
 ::-webkit-scrollbar {
     display: none;
+}
+
+$bg-color: hsl(256,33,10);
+$dot-color: hsl(256,256,256);
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 22px;
+
+.kantConclusion {
+	background:
+		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
+}
+
+.contentTitle{
+  font-family: 'Bungee Outline';
+  font-size: 4vh;
+  line-height: 5vh;
+}
+
+.contentLink{
+  margin: 20px 20px 20px 20px;
+}
+
+.contentTask{
+  font-family: 'Work Sans'
+}
+
+.contentDiscussion{
+  font-family: 'Work Sans'
+}
+
+.contentExplanation{
+  font-family: 'Work Sans'
 }
 
 .white {
@@ -70,11 +108,16 @@ body{
   margin-bottom: -141px;
 }
 
+#kant {
+  margin-bottom: 100px;
+  margin-left:250px;
+}
+
 #kosta{
   margin-left: 500px;
 }
 
-.card {
+.card1 {
   background-color: var(--background);
   display: block;
   width: 350px;
@@ -89,7 +132,7 @@ body{
   40px -40px 0 -3px var(--background), 40px -40px var(--red);
 }
 
-.card:hover {
+.card1:hover {
   animation: shadow-wave 1s ease infinite;
 }
 
@@ -150,7 +193,7 @@ body{
   --red: #FFF;
 }
 
-.card {
+.card1 {
   background-image: radial-gradient(var(--secondary) 30%, var(--background) 30%);
   background-size: 2px 3px;
   font-family: "Archivo", sans-serif;
@@ -160,7 +203,7 @@ body{
   box-sizing: border-box;
 }
 
-.card p {
+.card1 p {
   font-size: 2em;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -170,7 +213,7 @@ body{
   padding: 0px 0px 0px 20px;
 }
 
-.card h2 {
+.card1 h2 {
   font-family: 'Source code pro', sans-serif;
   font-weight: 600;
   font-size: 1em;
@@ -204,6 +247,18 @@ body{
   z-index: 1;
   text-align: center;
   top: 25%;
+}
+.kantText {
+  font: bold 15vmin/1 'Bungee Outline', serif;
+  color: #fff;
+  margin: 0;
+  padding: 10vh 0 10vh 0;
+}
+
+
+.centerText{
+  width:100%;
+  text-align: center;
 }
 
 @mixin zebra-shadow($size, $colors) {
