@@ -82,7 +82,8 @@ export default class Kant extends React.Component{
         <div className="kantConclusion" style={{minHeight: '30vh', color:'white', display: 'flex', alignItems: 'center',justifyContent: 'center',flexDirection: 'column', fontFamily:"Work Sans"}} >
           <div style={{width:"70%", fontSize: "3vh", padding: '50px'}}><i>"His behaviour was such a model of regularity that some called him ‘the Königsberg clock’. On teaching days, when he emerged from his house, people knew it was exactly eight o’clock. At ten to, he had put on his hat; at five to, he had picked up his stick; and at dead on eight he stepped out of his door. He said of his watch that it was the last possession he would part with." (<a href="https://www.versobooks.com/blogs/1963-immanuel-kant-the-errrr-walker">src</a>).</i> <br/>
           <div style={{paddingTop:"17px"}}/><strong>Below is Kant making his daily walk at 2! Use the left and right arrows to take your daily walk, but be quick! The townspeople need to set their clocks!</strong></div>
-        </div>
+          You may need to refresh the page to see this feature.
+      </div>
         <KantGame />
       </div>
     )}
