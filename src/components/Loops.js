@@ -19,8 +19,18 @@ export default class Loops extends React.Component {
       <div id="canvasContainer">
         <canvas id="canvas" height="800px" width="100%"></canvas>
         <div className="cards">
+          <a style={{textDecoration: "none"}} href="/kant">
+            <div className="card" id="kant">
+              <p>
+                Immanuel Kant
+              </p>
+              <h2>
+                MyModule
+              </h2>
+            </div>
+          </a>
           <a style={{textDecoration: "none"}} href="/will">
-            <div className="card" id="will">
+            <div className="card1" id="will">
               <p>
                 William Klingler
               </p>
@@ -30,7 +40,7 @@ export default class Loops extends React.Component {
             </div>
           </a>
           <a style={{textDecoration: "none"}} href="/kosta">
-            <div className="card" id="kosta">
+            <div className="card1" id="kosta">
               <p>
                 Kosta Gianicos
               </p>
